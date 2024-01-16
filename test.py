@@ -3,8 +3,8 @@ from numpy import log
 
 print("bon on essayer hein")
 
-a = os.environ['A']
-b = os.environ['B']
+a = float(os.environ['A'])
+b = float(os.environ['B'])
 # Tache 4
 print('la multiplication : ', a * b)
 

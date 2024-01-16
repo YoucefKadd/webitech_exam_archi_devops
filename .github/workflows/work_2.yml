@@ -4,8 +4,8 @@ on:
   workflow_dispatch:
 
 env:
-  a: 1 
-  b: 2
+  A: ${{ vars.A }}
+  B: ${{ vars.B }}
 
 jobs:
   job1:

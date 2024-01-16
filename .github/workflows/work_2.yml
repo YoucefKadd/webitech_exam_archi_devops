@@ -9,14 +9,14 @@ env:
 
 jobs:
   job1:
-    if: ${{ a > 0 }}
+    if: ${{ vars.A > 0 }}
     runs-on: ubuntu-latest
     steps:
     - name: Checkout
       uses: actions/checkout@v2
 
     - name: a et b sont positive 
-      run: echo $a " et " $b " et > à 0" 
+      run: echo "les vars sont positives"
   # job2:
   #   if: ${{ success() }}
   #   runs-on : ubuntu-latest

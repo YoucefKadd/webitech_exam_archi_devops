@@ -1,3 +1,3 @@
 import os
 
-print(os.environ("A"))
+print(float(os.environ["A"]))

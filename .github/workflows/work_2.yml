@@ -4,19 +4,20 @@ on:
   workflow_dispatch:
 
 env:
-  a: "a"
-  b: "b"
+  a: 1
+  b: 2
 
 
 jobs:
   job1:
+    if: ${{ a>0 && b>0 }}
     runs-on: ubuntu-latest
     steps:
     - name: Checkout
       uses: actions/checkout@v2
 
-    - name: Afficher la vars a et b 
-      run: echo $a " et " $b  
+    - name: a et b sont positive 
+      run: echo $a " et " $b " et > à 0" 
   # job2:
   #   if: ${{ success() }}
   #   runs-on : ubuntu-latest

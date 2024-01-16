@@ -17,11 +17,22 @@ jobs:
 
     - name: a et b sont positive 
       run: echo "les vars sont positives"
-  # job2:
-  #   if: ${{ success() }}
-  #   runs-on : ubuntu-latest
-  #   steps:
-  #   - name: Checkout
-  #     uses: actions/checkout@v2
-  #   - name: Si echec
-  #     run: echo "Le JOB1 a echoué"
+  job2:
+    runs-on : ubuntu-latest*
+    steps:
+    - name: Tache 1 - Checkout
+      uses: actions/checkout@v2
+
+    - name: Tache 2 -  Configuration de python sur ubuntu
+      uses: actions/setup-python@v2
+      with:
+        python-version: '3.8'
+
+    - name: Tache 3 - install numpy depuis requirements
+      run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+    - name : Tache 4 - executer fichier pyton
+      run: python test.py
+
+    

@@ -1,0 +1,27 @@
+name: Exercice 2
+
+on: 
+  workflow_dispatch:
+
+env:
+  a: "a"
+  b: "b"
+
+
+jobs:
+  job1:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v2
+
+    - name: Afficher la vars a et b 
+      run: echo $a " et " $b  
+  # job2:
+  #   if: ${{ success() }}
+  #   runs-on : ubuntu-latest
+  #   steps:
+  #   - name: Checkout
+  #     uses: actions/checkout@v2
+  #   - name: Si echec
+  #     run: echo "Le JOB1 a echoué"

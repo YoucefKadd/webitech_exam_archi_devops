@@ -1,0 +1,29 @@
+name: Exercice 1
+
+on :
+  push:
+    tags:
+      - 'v*'
+
+jobs:
+  job1:
+    env:
+      VAR1: "Hello ! je suis la var 1"
+
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v2
+
+    - name: Afficher la vars
+      run: echo $VAR1  
+  # job2:
+  #   runs-on : ubuntu-latest
+  #   steps:
+  #     - name: Si echec
+  #     run: "Le JOB1 a echoué"
+
+
+
+
+

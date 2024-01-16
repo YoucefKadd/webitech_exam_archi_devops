@@ -1,3 +1,5 @@
 import os
 
-print(float(os.environ["A"]))
+a = float(os.environ["A"])
+b = float(os.environ["B"])
+print(a, b)

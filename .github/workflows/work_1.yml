@@ -18,7 +18,7 @@ jobs:
     - name: Afficher la vars
       run: echo $VAR1  
   job2:
-    if: !failure()
+    if: ${{ success() }}
     runs-on : ubuntu-latest
     steps:
     - name: Checkout

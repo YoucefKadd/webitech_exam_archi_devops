@@ -1,5 +1,6 @@
 import os
+print("bon on essayer hein")
 
-a = float(os.environ['A'])
-b = float(os.environ['B'])
+a = os.environ['A']
+b = os.environ['B']
 print(a, b)

@@ -18,8 +18,8 @@ jobs:
     - name: Afficher la vars
       run: echo $VAR1  
   job2:
+    if: failure()
     runs-on : ubuntu-latest
     steps:
       - name: Si echec
-      if: ${{ failure() }}
-      run: "Le JOB1 a echoué"
+      run: echo "Le JOB1 a echoué"

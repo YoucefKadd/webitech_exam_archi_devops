@@ -22,8 +22,3 @@ jobs:
   #   steps:
   #     - name: Si echec
   #     run: "Le JOB1 a echoué"
-
-
-
-
-
